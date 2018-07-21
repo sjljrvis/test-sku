@@ -1,0 +1,42 @@
+
+.hero button {
+  width: 120px;
+    border: none;
+    background-color: #2a7cf7;
+    color: #FFFFFF;
+    height: 50px;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+.hero img {
+  height : 300px
+}
+
+.carousel{
+  border-radius: 50%;
+    height: 10px;
+    background-color: #666666;
+    width: 10px;
+    margin-right: 20px
+}
+
+.content h2 {
+color : #FFFFFF
+}
+
+.content h4{
+  color : #FFFFFF
+}
+
+.content button{
+  border-style: solid;
+  border-width: 1px;
+  border-color: #FFFFFF;
+  background: none;
+  color: #FFFFFF;
+  height: 45px;
+  font-size: 20px;
+  width: 120px;
+  border-radius: 5px;
+}

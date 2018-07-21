@@ -1,0 +1,88 @@
+
+.App-logo{
+height: 50px;
+width : 50px;
+}
+
+.App-header h1{
+  color : #2a7cf7;
+  font-size: 3em;
+  margin: 10px;
+}
+
+.App-header h4{
+  color : #2a7cf7;
+  margin-left: 10px;
+  margin-right: 10px
+}
+
+
+
+.Hamburger-icon{
+  border-style: solid;
+  background: #ffff;
+  border: #fff;
+}
+
+.Nav-mobile {
+  display:none;
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .Nav-list {
+    display:none;
+  }
+  .Nav-mobile {
+    display:block;
+  }
+  
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+ /* Sidenavbar */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 50px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #ff5722;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}

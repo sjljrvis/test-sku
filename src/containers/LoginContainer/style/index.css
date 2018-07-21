@@ -1,0 +1,40 @@
+.Auth-container{
+  width: 100%;
+  height: 100vh;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.Auth-card{
+  width: 300px;
+  height: auto;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: #2a7cf7;
+  padding: 15px;
+}
+
+
+.Auth-card input{
+  width: -webkit-fill-available;
+  border-color: #2a7cf7;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.Auth-card button {
+  width: 120px;
+  border: none;
+  background-color: #2a7cf7;
+  color: #FFFFFF;
+  height: 35px;
+  font-size: 17px;
+  border-radius: 5px;
+}

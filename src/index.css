@@ -1,0 +1,11 @@
+body,
+h1
+{
+  font-family: 'Cabin', sans-serif;
+  font-weight: lighter;
+  color: #666666;
+}
+
+h1,h2,h3,h4,h5,h6{
+  line-height: 1.5;
+}
