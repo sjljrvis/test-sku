@@ -1,0 +1,23 @@
+.App-side-bar{
+  width: 60px;
+  -webkit-transition: width .5s ease-in; /* For Safari 3.1 to 6.0 */
+  transition: width .5s ease-in;
+}
+
+.App-side-bar h4{
+  margin: 0;
+  display: none;
+  color: #FFFFFF;
+  font-weight: 100;
+  font-size: 15px
+}
+
+.App-side-bar:hover {
+  width: 200px;
+}
+
+.App-side-bar:hover h4{
+  display:block;
+  -webkit-transition: display .5s ease-in; /* For Safari 3.1 to 6.0 */
+  transition: display .5s ease-in;
+}

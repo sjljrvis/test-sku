@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import HomeContainer from '../HomeContainer'
 import LoginContainer from '../LoginContainer'
+import DashBoardContainer from '../DashboardContainer'
 
 class App extends Component {
 
@@ -13,8 +14,9 @@ class App extends Component {
 
         <Switch>
 
-          <Route exact path="/" component={HomeContainer} />
+          <Route exact path="/home" component={HomeContainer} />
           <Route exact path="/login" component={LoginContainer} />
+          <Route exact path="/" component={DashBoardContainer} />
           
         </Switch>
 
