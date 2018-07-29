@@ -47,3 +47,30 @@
   font-size: 17px;
   border-radius: 5px;
 }
+
+.Info-h4{
+  color : #2a7cf7;
+}
+
+.Info-textArea{
+  border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    z-index: auto;
+    position: relative;
+    line-height: 20px;
+    font-size: 14px;
+    transition: none;
+    background: transparent !important;
+    padding: 5px;
+    outline: none;
+}
+
+.Info-input{
+  background-color: #eaeaea;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  outline: none;
+  padding: 5px;
+}
