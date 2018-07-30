@@ -13,15 +13,15 @@ class ProductContainer extends Component {
     super(props)
     this.state = {
       title: "Tactical Military Molle System Water Bags Water Bottle Outdoor Bag",
-      price : 0
+      price: 0
     }
   }
 
   setTitle = (e) => {
     this.setState({ title: e.target.value })
   }
-  setPrice = (e) =>{
-    this.setState({ price: e.target.value })    
+  setPrice = (e) => {
+    this.setState({ price: e.target.value })
   }
 
   handleEditorChange = (e) => {
@@ -47,13 +47,13 @@ class ProductContainer extends Component {
             <div style={{ width: "100%", height: 500, border: "none" }}>
               <Grid>
                 <Row size={5}>
-                  <Col xs={12} md={2}>
+                  <Col xs={12} md={4}>
                     <img
                       style={{ width: 200, height: 200 }}
                       src="https://ae01.alicdn.com/kf/HTB1_Lu4SXXXXXc3aXXXq6xXFXXXY/Outdoor-Hydration-Backpack-5L-Water-Bag-Backpacks-Portable-Cycling-Camping-Hiking-Climbing-Pouch-Waterbag.jpg"
                       alt='product' />
                   </Col>
-                  <Col xs={12} md={10}>
+                  <Col xs={12} md={8}>
                     <h4 className="Info-h4">Title :</h4>
                     <textarea
                       className="Info-textArea"
@@ -66,13 +66,14 @@ class ProductContainer extends Component {
                     <input className="Info-input"
                       placeholder=" $ 50"
                       type="number"
-                      onChange={(e) => {this.setPrice(e) }} />
+                      onChange={(e) => { this.setPrice(e) }} />
                   </Col>
                 </Row>
 
                 <Row size={5}>
-                  <Col xs={12} md={12}>
-
+                  <Col xs={12} md={4}>
+                  </Col>
+                  <Col xs={12} md={8}>
                     <h4 className="Info-h4">Description</h4>
                     <Trumbowyg
                       id='react-trumbowyg'
@@ -93,6 +94,30 @@ class ProductContainer extends Component {
                     />
                   </Col>
                 </Row>
+
+                <Row size={5}>
+                  <Col xs={12} md={12}>
+                    <h4 className="Info-h4">Images</h4>
+
+                    <div className="Card-image-container">
+                      {
+                        [1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, key) => {
+                          return (
+                            <div key={key} className="Card-image-item">
+                              <img
+                                src="https://ae01.alicdn.com/kf/HTB1_Lu4SXXXXXc3aXXXq6xXFXXXY/Outdoor-Hydration-Backpack-5L-Water-Bag-Backpacks-Portable-Cycling-Camping-Hiking-Climbing-Pouch-Waterbag.jpg" alt='product' />
+                              <div style={{ height: 30, backgroundColor: "rgba(102,102,102,0.3)", padding: 2 }}>
+                                <input type="checkbox" />
+                              </div>
+                            </div>
+                          )
+                        })
+                      }
+                    </div>
+
+                  </Col>
+                </Row>
+
               </Grid>
 
             </div>
