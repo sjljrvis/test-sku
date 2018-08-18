@@ -1,4 +1,5 @@
 .App-side-bar{
+  background-color: #FFFFFF;
   width: 60px;
   -webkit-transition: width .5s ease-in; /* For Safari 3.1 to 6.0 */
   transition: width .5s ease-in;
@@ -6,7 +7,7 @@
 
 .App-side-bar h4{
   margin: 0;
- opacity:0;
+  opacity:0;
   color : #2a7cf7;
   font-weight: 100;
   font-size: 15px
@@ -14,6 +15,8 @@
 
 .App-side-bar:hover {
   width: 200px;
+  -webkit-transition: opacity .5s ease-in;
+  transition: opacity .5s ease-in;
 }
 
 .App-side-bar:hover h4{

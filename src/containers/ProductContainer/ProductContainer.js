@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Glyphicon, Row, Col, Grid } from 'react-bootstrap';
 import Trumbowyg from 'react-trumbowyg'
 
-import SideBar from '../../components/SideBar'
+import DashboardHeader from '../../components/DashboardHeader'
 
 import '../../../node_modules/react-trumbowyg/dist/trumbowyg.min.css'
 import './style/index.css';
@@ -32,17 +32,10 @@ class ProductContainer extends Component {
 
     return (
       <div style={{ display: "flex", flexDirection: "row" }}>
-        <SideBar />
 
         <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
-
-          <div className="Header">
-            <div className="Header-Container">
-              <input placeholder="Search" className="Input-search-box" />
-              <Glyphicon glyph="search" />
-            </div>
-          </div>
-
+          <DashboardHeader />
+          
           <div style={{ padding: 0, width: "100%", paddingLeft: 75, minHeight: "100vh", marginTop: 75 }}>
             <div style={{ width: "100%", height: 500, border: "none" }}>
               <Grid>

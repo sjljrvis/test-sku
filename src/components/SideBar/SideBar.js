@@ -19,7 +19,7 @@ class SideBar extends Component {
       <div>
         <div
           className="App-side-bar"
-          style={{ backgroundColor: "#F7F9FA", height: '100vh', padding: 5, position: "fixed",zIndex:999 }}
+          style={{ backgroundColor: "#FFF", height: '100vh', padding: 5, position: "fixed",zIndex:999 }}
         >
 
           <div style={{ height: "50%", }}>

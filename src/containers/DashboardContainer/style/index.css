@@ -1,42 +1,4 @@
 
-.Input-search-box{
-  height: 40px;
-  border: none;
-  padding-left: 15px;
-  border-radius: 5px;
-  outline: none;
-  background-color: rgb(234, 234, 234);
-  width: 90%;
-}
-
-.Header {
-  z-index:99;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #f2f2f2;
-  position: fixed;
-  background-color: rgb(255, 255, 255);
-  height: 75px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  align-items: center;
-  padding-left: 75px;
-}
-
-.Header-Container{
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(234, 234, 234);
-  padding-right: 10px;
-  border-radius: 5px;
-  width: 60%;
-}
-
 
 .Card-container {
   width: 100%;
@@ -126,31 +88,64 @@
 
 .Info-cards{
   border-style: solid;
-  border-width: 1px;
-  border-color: #e3e3e3;
-  border-radius:5px; 
-  margin: 5px;
-  height: 150px;
-  width: 220px;
+  border-width: 0px;
+  border-color: #F8F8F8;
+  border-radius:2px;
+  margin: 5px; 
+  height: 75px;
+  width: 95%;
   background-color: #FFFFFF ;
   align-content: center;
   align-items: center;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-left: 5px;
+  padding-right: 5px
 }
 
 .Info-cards h4{
   color: #2a7cf7;
+  font-size: 15px
 }
 
 .Info-cards button{
   width: 60px;
-  border: none;
-  background-color: #2a7cf7;
-  color: #FFFFFF;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #2a7cf7;
+  background-color: #FFFFFF;
+  color: #2a7cf7;
   height: 30px;
   font-size: 14px;
-  border-radius: 5px;
+  border-radius: 2px;
   font-weight: normal;
+}
+
+.Info-how-card-Container{
+  padding: 25px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.Info-how-card{
+  margin: 10px;
+  width: 220px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  -webkit-box-shadow: 0px 2px 15px 1px rgba(201,201,201,1);
+  -moz-box-shadow: 0px 2px 15px 1px rgba(201,201,201,1);
+  box-shadow: 0px 2px 15px 1px rgba(201,201,201,1);
+}
+
+.Note span{
+  color: #2a7cf7;
 }

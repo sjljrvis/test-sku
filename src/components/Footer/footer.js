@@ -8,7 +8,7 @@ class Footer extends Component {
 
   render() {
     return (
-      <footer style={{ backgroundColor: "#F1F1F1" }}>
+      <footer style={{ backgroundColor: "#FFFFFF" }}>
         <Grid>
           <Row>
             <Col xs={12} md={8}>

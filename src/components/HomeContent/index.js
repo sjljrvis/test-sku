@@ -76,7 +76,6 @@ class HomeContent extends Component {
 
         <div className="content" style={{
           height: 300, backgroundColor: "#2a7cf7",
-          backgroundImage: "linear-gradient(90deg,#00bbff, #2a7cf7)",
           display: "flex", flexDirection: "column",
           alignContent: "center", padding: 5,
           alignItems: "center", justifyContent: "center"

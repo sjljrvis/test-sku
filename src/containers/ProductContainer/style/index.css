@@ -1,41 +1,4 @@
 
-.Input-search-box{
-  height: 40px;
-  border: none;
-  padding-left: 15px;
-  border-radius: 5px;
-  outline: none;
-  background-color: rgb(234, 234, 234);
-  width: 90%;
-}
-
-.Header {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #f2f2f2;
-  position: fixed;
-  background-color: rgb(255, 255, 255);
-  height: 75px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  align-items: center;
-  padding-left: 75px;
-}
-
-.Header-Container{
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(234, 234, 234);
-  padding-right: 10px;
-  border-radius: 5px;
-  width: 60%;
-}
-
 .Card-image-container{
   width: 100%;
   height: 100%;

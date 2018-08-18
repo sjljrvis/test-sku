@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SideBar from '../../components/SideBar'
+import DashboardHeader from '../../components/DashboardHeader'
 import { Glyphicon } from 'react-bootstrap';
 
 import './style/index.css';
@@ -31,48 +31,84 @@ class DashBoardContainer extends Component {
 
     return (
       <div style={{ display: "flex", flexDirection: "row" }}>
-        <SideBar />
+        {/* <SideBar /> */}
 
         <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
+          <DashboardHeader />
+          <div style={{ width: "100%", paddingLeft: 20, minHeight: "100vh", marginTop: 75 }}>
 
-          <div className="Header">
-            <div className="Header-Container">
-              <input placeholder="Search" className="Input-search-box" />
-              <Glyphicon glyph="search" />
-            </div>
-          </div>
-
-          <div style={{ paddingLeft: 30, width: "100%", paddingLeft: 75, minHeight: "100vh", marginTop: 75 }}>
-
-            <h1>Heyoo !!</h1>
-            <h2>Lets get started</h2>
+            <h2>Lets get started ...</h2>
             <div className="gradient-2">
               <div className="Info-cards">
                 <h4>Create shopify store</h4>
-                <button>create</button>
+                <button>Click</button>
               </div>
               <div className="Info-cards">
                 <h4>Connect store</h4>
-                <button>connect</button>
+                <button>Click</button>
               </div>
               <div className="Info-cards">
                 <h4>Find and Add product</h4>
-                <button>click</button>
+                <button>Click</button>
               </div>
               <div className="Info-cards">
                 <h4>Make a sell</h4>
-                <button>here</button>
+                <button>Click</button>
               </div>
             </div>
 
-            <div className="gradient">
+
+
+            <div className="Info-how">
+              <h2>How it works ?</h2>
+
+              <div className="Info-how-card-Container">
+                <div className="Info-how-card">
+                  <img src="../../../assets/online-store.svg" alt="store" style={{ width: 100, height: 100 }} />
+                  <h4>You create a shopify store</h4>
+                </div>
+
+                <div className="Info-how-card">
+                  <img src="../../../assets/cable.svg" alt="store" style={{ width: 100, height: 100 }} />
+                  <h4>Connect to dropsku</h4>
+                </div>
+
+                <div className="Info-how-card">
+                  <img src="../../../assets/chrome.svg" alt="store" style={{ width: 100, height: 100 }} />
+                  <h4>Install dropsku chrome ext</h4>
+                </div>
+
+                <div className="Info-how-card">
+                  <img src="../../../assets/ali-exp.svg" alt="store" style={{ width: 100, height: 100 }} />
+                  <h4>Find products from ali-express</h4>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="Note">
+              <h2>Note</h2>
+
+              <div style={{ margin: 20 }} className="Notes">
+                <h4>1 . <span>dropsku</span> chrome extension supports ali-express only.</h4>
+                <h4>2 . Support for other e-commerce platform is still in development phase</h4>
+              </div>
+            </div>
+
+
+            <div style={{ height: "30vh" }}>
+            </div>
+
+            {/* <div className="gradient">
               <div className="Sub-menu">
                 <h5>Mystore</h5>
                 <h5>My Products</h5>
                 <h5>Billing</h5>
               </div>
-            </div>
-            <h4> Product list</h4>
+            </div> */}
+
+
+            {/* <h4> Product list</h4>
             <div className="Card-container">
               {
                 [1, 2, 3, 4, 5, 6, 7, 8, 9, 0,].map((item, key) => {
@@ -95,7 +131,7 @@ class DashBoardContainer extends Component {
                 })
               }
 
-            </div>
+            </div> */}
 
 
 
