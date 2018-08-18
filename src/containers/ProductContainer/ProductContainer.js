@@ -48,10 +48,15 @@ class ProductContainer extends Component {
               <Grid>
                 <Row size={5}>
                   <Col xs={12} md={4}>
-                    <img
-                      style={{ width: 200, height: 200 }}
-                      src="https://ae01.alicdn.com/kf/HTB1_Lu4SXXXXXc3aXXXq6xXFXXXY/Outdoor-Hydration-Backpack-5L-Water-Bag-Backpacks-Portable-Cycling-Camping-Hiking-Climbing-Pouch-Waterbag.jpg"
-                      alt='product' />
+                    <Row>
+                      <img
+                        style={{ width: 200, height: 200 }}
+                        src="https://ae01.alicdn.com/kf/HTB1_Lu4SXXXXXc3aXXXq6xXFXXXY/Outdoor-Hydration-Backpack-5L-Water-Bag-Backpacks-Portable-Cycling-Camping-Hiking-Climbing-Pouch-Waterbag.jpg"
+                        alt='product' />
+                    </Row>
+                    <Row>
+                      <button className="Save-button"> Save</button>
+                    </Row>
                   </Col>
                   <Col xs={12} md={8}>
                     <h4 className="Info-h4">Title :</h4>
