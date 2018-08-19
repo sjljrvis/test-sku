@@ -64,3 +64,7 @@
   font-size: 17px;
   border-radius: 5px;
 }
+
+.Product-info .nav-tabs>li>a {
+  font-weight: 500
+}
