@@ -80,7 +80,7 @@ class DashBoardContainer extends Component {
 
                 <div className="Info-how-card">
                   <img src="../../../assets/ali-exp.svg" alt="store" style={{ width: 100, height: 100 }} />
-                  <h4>Find products from ali-express</h4>
+                  <h4>Find right products </h4>
                 </div>
               </div>
 
