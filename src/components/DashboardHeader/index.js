@@ -23,21 +23,34 @@ class Header extends Component {
 
         <div id="appSidenav" className="left-sidenav">
           <a onClick={() => { this.closeNav() }} >close &times;</a>
-          <a ><h4>Pricing</h4></a>
-          <a ><h4>Features</h4></a>
-          <a ><h4>Login</h4></a>
+
+          <a ><h4 style={{ fontWeight: 300 }}>Products</h4></a>
+          <a ><h4 style={{ fontWeight: 300 }}>Orders</h4></a>
+          <a ><h4 style={{ fontWeight: 300 }}>Messages</h4></a>
+          <a ><h4 style={{ fontWeight: 300 }}>Analytics</h4></a>
+          <a ><h4 style={{ fontWeight: 300 }}>Store</h4></a>
+          <a ><h4 style={{ fontWeight: 300 }}>Billing</h4></a>
+
         </div>
 
+        <Grid>
+          <Row>
+            <Col xs={10} md={8} >
+              <div style={{ display: "flex", flexDirection: "row", margin: 20, alignContent: "center", alignItems: "center", height: 60 }}>
+                <img className="App-logo" src="../../../assets/box.svg" alt="logo" />
+                <h1> dropsku</h1>
+              </div>
+            </Col>
 
-        <div className="Header">
-          <button className="Hamburger-icon" onClick={() => { this.openNav() }}>
-            <img src="../../../assets/menu-icon.svg" alt="menu" style={{width:30,height:30}}/>
-          </button>
-          <div className="Header-Container">
-            <input placeholder="Search" className="Input-search-box" />
-            <Glyphicon glyph="search" />
-          </div>
-        </div>
+            <Col xs={2} md={4} className="Nav-mobile">
+              <div style={{ display: "flex", flexDirection: "row", margin: 20, alignContent: "center", alignItems: "center", justifyContent: "space-around", height: 60 }}>
+                <button className="Hamburger-icon" onClick={() => { this.openNav() }}>
+                  <Glyphicon glyph="menu-hamburger" />
+                </button>
+              </div>
+            </Col>
+          </Row>
+        </Grid>
 
       </div>
     );
