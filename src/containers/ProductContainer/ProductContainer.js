@@ -17,114 +17,82 @@ class ProductContainer extends Component {
     }
   }
 
-  setCheckedItem = (index) => {
-    let { checkedProducts } = this.state;
-    if (checkedProducts.indexOf(index) == -1) {
-      checkedProducts.push(index);
-      this.setState({ checkedProducts })
-    }
-    else {
-      checkedProducts.splice(index, 1)
-      this.setState({ checkedProducts })
-    }
-  }
-  setCheckedItems = () => {
-    let { products, checkedProducts } = this.state;
-    if (checkedProducts.length !== products.length) {
-      checkedProducts = products.map((item, index) => { return index })
-      this.setState({ checkedProducts })
-    }
-    else {
-      this.setState({ checkedProducts: [] })
-    }
-  }
+
 
   render() {
     let { products, checkedProducts } = this.state;
     return (
-      <div style={{ display: "flex", flexDirection: "row" }}>
+      <div>
+        <DashboardHeader />
+        <Grid>
+          <Row>
+            <Col md={2} xsHidden={true}>
+              <div className="app-sidebar" style={{ height: 500, width: 200 }}>
+                <div className="app-sidebar-item">
+                  <h4 style={{ fontWeight: 300, fontSize: 16 }}><ion-icon name="ios-archive" style={{ marginRight: 5 }}></ion-icon>Products</h4>
+                </div>
 
-        <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
-          <DashboardHeader />
+                <div className="app-sidebar-item">
+                  <h4 style={{ fontWeight: 300, fontSize: 16 }}> <ion-icon name="ios-cart" style={{ marginRight: 5 }}></ion-icon> Orders</h4>
+                </div>
 
-          <div className="Product-list">
+                <div className="app-sidebar-item">
+                  <h4 style={{ fontWeight: 300, fontSize: 16 }}><ion-icon name="chatboxes" style={{ marginRight: 5 }}></ion-icon>Messages</h4>
+                </div>
 
-            <div className="Product-list-Container">
-              <table style={{ width: "80%" }}>
-                <tbody>
-                  <tr className="Product-table-header">
-                    <th style={{}}>
-                      <label className="checkbox-container">
-                        Select
-                      <input type="checkbox" onChange={(e) => this.setCheckedItems()} />
-                        <span className="checkmark"></span>
-                      </label>
-                    </th>
-                    <th>Product</th>
-                    <th>Title</th>
-                    <th>Price</th>
-                    <th style={{ textAlign: "center" }}>Actions</th>
-                  </tr>
+                <div className="app-sidebar-item">
+                  <h4 style={{ fontWeight: 300, fontSize: 16 }}><ion-icon name="stats" style={{ marginRight: 5 }}></ion-icon>Analytics</h4>
+                </div>
 
-                  {
-                    products.map((item, index) => {
-                      return (
-                        <tr className="Product-list-item" key={index} >
-                          <td>
-                            <label className="checkbox-container">
-                              &nbsp;
-                             <input type="checkbox"
-                                checked={checkedProducts.indexOf(index) !== -1 ? true : false}
-                                onChange={(e) => this.setCheckedItem(index)} />
-                              <span className="checkmark"></span>
-                            </label>
-                          </td>
-                          <td className="Product-list-item-image">
-                            <img
-                              alt="img"
-                              src="http://images.voonik.com/71845882/casual-shoes-for-men-sneakers-for-men-designer-shoe-product.jpg?1527147786" />
-                          </td>
-                          <td className="Product-list-item-title"><h4>Product</h4></td>
-                          <td className="Product-list-item-shipping"><h4>Shipping  7-10 days</h4></td>
-                          <td className="Product-list-item-price"><h4>US 50$</h4></td>
-                          <td className="Product-list-item-merchant"><h4>By <span>Ali-express</span></h4></td>
-                          <td className="Product-list-item-actions">
-                            <div>
-                              <button>View</button>
-                              <button className="import">  <Glyphicon glyph="plus" style={{ fontSize: 10 }} /> Import</button>
-                            </div>
-                          </td>
-                        </tr>
-                      )
-                    })
-                  }
-                </tbody>
-              </table>
-              <div className="Product-list-action-card">
-                <h4>Selected 10 items</h4>
-                <button className="Product-list-action-card-remove"> <Glyphicon glyph="remove" style={{ fontSize: 10 }} /> Remove</button>
-                <button className="Product-list-action-card-import"> <Glyphicon glyph="plus" style={{ fontSize: 10 }} />Import</button>
+                <div className="app-sidebar-item">
+                  <h4 style={{ fontWeight: 300, fontSize: 16 }}><ion-icon name="pricetag" style={{ marginRight: 5 }}></ion-icon>Store</h4>
+                </div>
+
+                <div className="app-sidebar-item">
+                  <h4 style={{ fontWeight: 300, fontSize: 16 }}><ion-icon name="cash" style={{ marginRight: 5 }}></ion-icon>Billing</h4>
+                </div>
+
               </div>
-            </div>
+            </Col>
+            <Col md={10} xs={12}>
+              <div style={{ height: 500, width: "100%" }}>
+                <div className="Card-list" style={{ marginTop: 20 }}>
+                  <div className="Card">
+                    <img src="../../../assets/online-store.svg" alt="store" style={{ width: 50, height: 50 }} />
+                    <div style={{ display: "flex", flexDirection: "column", marginLeft: 20 }}>
+                      <h4>You create a shopify store</h4>
+                      <p>Create a shopify store and connect it here</p>
+                    </div>
+                  </div>
 
-            <div style={{ marginTop: 10 }}>
-              <button>1</button>
-              <button>2</button>
-              <button>3</button>
-              <button>4</button>
-              <button>5</button>
-            </div>
+                  <div className="Card">
+                    <img src="../../../assets/chrome.svg" alt="store" style={{ width: 50, height: 50 }} />
+                    <div style={{ display: "flex", flexDirection: "column", marginLeft: 20 }}>
+                      <h4>Install dropsku chrome app</h4>
+                      <p>Install dropsku chrome extension here and lets go !!</p>
+                    </div>
+                  </div>
 
-          </div>
+                  <div className="Card">
+                    <img src="../../../assets/ali-exp.svg" alt="store" style={{ width: 50, height: 50 }} />
+                    <div style={{ display: "flex", flexDirection: "column", marginLeft: 20 }}>
+                      <h4>Find right products from ali-express</h4>
+                      <p>Easily import products from ali-express to dropsku and manage you inventory</p>
+                    </div>
+                  </div>
 
-
-        </div>
-
-        <div className="Product-table-footer-mobile">
-          <h4>Selected 10 items</h4>
-          <button> <Glyphicon glyph="remove" style={{ fontSize: 10 }} /> Remove</button>
-          <button> <Glyphicon glyph="plus" style={{ fontSize: 10 }} />Import</button>
-        </div>
+                  <div className="Card">
+                    <img src="../../../assets/sell.svg" alt="store" style={{ width: 50, height: 50 }} />
+                    <div style={{ display: "flex", flexDirection: "column", marginLeft: 20 }}>
+                      <h4>Make a sell</h4>
+                      <p>Easily edit product details and make a sell</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Grid>
       </div>
     );
   }
