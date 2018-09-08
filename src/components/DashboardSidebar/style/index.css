@@ -1,0 +1,82 @@
+
+.Input-search-box{
+  height: 40px;
+  border: none;
+  padding-left: 15px;
+  border-radius: 5px;
+  outline: none;
+  background-color: rgb(234, 234, 234);
+  width: 90%;
+}
+
+.Header {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  padding-left: 20px;
+  justify-content: flex-start;
+
+}
+
+.Header-Container{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding-right: 10px;
+  border-radius: 5px;
+  width: 60%;
+  margin-left: 20px
+}
+
+
+
+/* left-sidenavbar */
+
+.left-sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #F8F8F8;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+}
+
+.left-sidenav a {
+  padding: 8px 8px 8px 50px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.left-sidenav a:hover {
+  color: #ff5722;
+}
+
+.left-sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .left-sidenav {padding-top: 15px;}
+  .left-sidenav a {font-size: 18px;}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 668px) {
+  
+}
