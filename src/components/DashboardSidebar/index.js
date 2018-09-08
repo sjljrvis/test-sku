@@ -17,30 +17,37 @@ class DashboardSidebar extends Component {
 
 
   render() {
+    let { activeClass } = this.props;
     return (
       <div className="app-sidebar" style={{ height: 500, width: 200 }}>
         <div className="app-sidebar-item">
-          <h4 style={{ fontWeight: 300, fontSize: 16 }}><ion-icon name="ios-archive" style={{ marginRight: 5 }}></ion-icon>Products</h4>
+          <h4 style={{ fontWeight: 300, fontSize: 16, color: activeClass === "Products" ? "#2a7cf7" : null }}>
+            <ion-icon name="ios-archive" style={{ marginRight: 5 }}></ion-icon>Products</h4>
         </div>
 
         <div className="app-sidebar-item">
-          <h4 style={{ fontWeight: 300, fontSize: 16 }}> <ion-icon name="ios-cart" style={{ marginRight: 5 }}></ion-icon> Orders</h4>
+          <h4 style={{ fontWeight: 300, fontSize: 16, color: activeClass === "Orders" ? "#2a7cf7" : null }}>
+            <ion-icon name="ios-cart" style={{ marginRight: 5 }}></ion-icon> Orders</h4>
         </div>
 
         <div className="app-sidebar-item">
-          <h4 style={{ fontWeight: 300, fontSize: 16 }}><ion-icon name="chatboxes" style={{ marginRight: 5 }}></ion-icon>Messages</h4>
+          <h4 style={{ fontWeight: 300, fontSize: 16, color: activeClass === "Messages" ? "#2a7cf7" : null }} >
+            <ion-icon name="chatboxes" style={{ marginRight: 5 }}></ion-icon>Messages</h4>
         </div>
 
         <div className="app-sidebar-item">
-          <h4 style={{ fontWeight: 300, fontSize: 16 }}><ion-icon name="stats" style={{ marginRight: 5 }}></ion-icon>Analytics</h4>
+          <h4 style={{ fontWeight: 300, fontSize: 16, color: activeClass === "Analytics" ? "#2a7cf7" : null }}>
+            <ion-icon name="stats" style={{ marginRight: 5 }}></ion-icon>Analytics</h4>
         </div>
 
         <div className="app-sidebar-item">
-          <h4 style={{ fontWeight: 300, fontSize: 16 }}><ion-icon name="pricetag" style={{ marginRight: 5 }}></ion-icon>Store</h4>
+          <h4 style={{ fontWeight: 300, fontSize: 16, color: activeClass === "Store" ? "#2a7cf7" : null }}>
+            <ion-icon name="pricetag" style={{ marginRight: 5 }}></ion-icon>Store</h4>
         </div>
 
         <div className="app-sidebar-item">
-          <h4 style={{ fontWeight: 300, fontSize: 16 }}><ion-icon name="cash" style={{ marginRight: 5 }}></ion-icon>Billing</h4>
+          <h4 style={{ fontWeight: 300, fontSize: 16, color: activeClass === "Billing" ? "#2a7cf7" : null }}>
+            <ion-icon name="cash" style={{ marginRight: 5 }}></ion-icon>Billing</h4>
         </div>
 
       </div>
