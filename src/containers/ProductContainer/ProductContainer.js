@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { Glyphicon, Row, Col, Grid, Tabs, Tab } from 'react-bootstrap';
-import Trumbowyg from 'react-trumbowyg'
 
 import DashboardHeader from '../../components/DashboardHeader'
 import DashboardSidebar from '../../components/DashboardSidebar'
 
-import '../../../node_modules/react-trumbowyg/dist/trumbowyg.min.css'
 import './style/index.css';
 
 class ProductContainer extends Component {
@@ -42,7 +40,7 @@ class ProductContainer extends Component {
 
 
                 <div className="Product-list">
-                  {new Array(20).fill(1, 0, 20).map((item, index) => {
+                  {new Array(10).fill(1, 0, 20).map((item, index) => {
                     return (
                       <div key={index} className="Product-list-cards">
                         <div className="Product-list-cards-img">
@@ -51,7 +49,7 @@ class ProductContainer extends Component {
                             src="http://images.voonik.com/71845882/casual-shoes-for-men-sneakers-for-men-designer-shoe-product.jpg?1527147786" />
                         </div>
 
-                        <div style={{ marginLeft: 10 }}>
+                        <div style={{ marginLeft: 50 }}>
                           <h5>{new String("Men Flats Shoes Mesh Breathable Shoes Casual Running Shoes Sneaker").slice(0)}</h5>
                           <h4 style={{ color: "#2a7cf7" }}> US 50 $</h4>
                           <h5 style={{ color: "#D0D0D0" }}>{new String("Shipment Provider").slice(0)}</h5>

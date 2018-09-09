@@ -10,15 +10,19 @@
 }
 
 .Product-list{
-  padding: 20px
+  padding: 20px;
 }
 
 .Product-list-cards{
-  background-color: #F8F8F8;
-  padding: 10px;
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #F2F2F2;
+  background-color: #FFFFFF;
+  padding: 0px;
   display: flex;
   flex-direction: row;
-  margin-bottom: 10px
+  margin-bottom: 20px
 }
 
 .Product-list-cards-img{
@@ -32,7 +36,7 @@
   object-fit: contain;
 }
 
-.Product-list-cards button{
+.bordered-button,.Product-list-cards button{
   border-style: solid;
   border-color: #2a7cf7;
   border-width: 1px;
