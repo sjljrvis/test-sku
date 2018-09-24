@@ -20,7 +20,7 @@ class DashboardSidebar extends Component {
     let { activeClass } = this.props;
     return (
       <div className="app-sidebar" style={{ height: 500, width: 200 }}>
-        <div className="app-sidebar-item">
+        <div className="app-sidebar-item" onClick={() => this.props.history.push('/product')}>
           <h4 style={{ fontWeight: 300, fontSize: 16, color: activeClass === "Products" ? "#2a7cf7" : null }}>
             <ion-icon name="ios-archive" style={{ marginRight: 5 }}></ion-icon>Products</h4>
         </div>
@@ -50,7 +50,7 @@ class DashboardSidebar extends Component {
             <ion-icon name="cash" style={{ marginRight: 5 }}></ion-icon>Billing</h4>
         </div>
 
-      </div>
+      </div >
     );
   }
 }

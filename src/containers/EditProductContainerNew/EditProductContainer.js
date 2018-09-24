@@ -13,16 +13,49 @@ class EditProductContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      image: null,
       title: "Tactical Military Molle System Water Bags Water Bottle Outdoor Bag",
       price: 0
     }
   }
 
+  setFile = (e) => {
+    this.setState({ image: e.target.files[0] }, () => {
+      this.uploadFile()
+    })
+  }
   setTitle = (e) => {
     this.setState({ title: e.target.value })
   }
   setPrice = (e) => {
     this.setState({ price: e.target.value })
+  }
+
+
+  makeForm = (file) => {
+    console.log(file)
+    let data = new FormData();
+    data.append('userId', "1231212")
+    data.append("file", file);
+    return data;
+  }
+
+  uploadFile = () => {
+    let { image } = this.state;
+    let postData = {
+      accept: 'application/json',
+      mode: "no-cors",
+      method: 'POST',
+      body: this.makeForm(image),
+    }
+
+    fetch('http://localhost:3001/file', postData)
+      .then((response) => {
+        console.log(response)
+      })
+      .catch((error) => {
+        console.log(error)
+      });
   }
 
   handleEditorChange = (e) => {
@@ -37,7 +70,7 @@ class EditProductContainer extends Component {
         <Grid>
           <Row>
             <Col md={2} xsHidden={true} smHidden={true}>
-              <DashboardSidebar activeClass="Products" />
+              <DashboardSidebar activeClass="Products" {...this.props}/>
             </Col>
             <Col md={10} xs={12}>
 
@@ -50,12 +83,18 @@ class EditProductContainer extends Component {
                 <div className="Product-Edit">
 
                   <Col xs={12} sm={4} md={4} >
+
                     <div style={{ padding: 20, textAlign: "center" }}>
                       <div className="Product-Edit-img">
                         <img src="http://images.voonik.com/71845882/casual-shoes-for-men-sneakers-for-men-designer-shoe-product.jpg?1527147786" alt="img" />
                       </div>
-                      <button className="bordered-button">Upload new </button>
+
+                      <div className="upload-btn-wrapper">
+                        <button className="bordered-button">Upload new </button>
+                        <input type="file" name="myfile" onChange={(e) => this.setFile(e)} />
+                      </div>
                     </div>
+
                   </Col>
 
                   <Col xs={12} sm={8} md={8} >
