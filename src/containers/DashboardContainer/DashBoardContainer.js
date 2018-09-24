@@ -22,7 +22,7 @@ class DashBoardContainer extends Component {
       <Grid>
         <Row>
           <Col md={2} xsHidden={true}>
-						<DashboardSidebar />
+						<DashboardSidebar {...this.props}/>
           </Col>
           <Col md={10} xs={12}>
             <div style={{ height: 500, width: "100%" }}>

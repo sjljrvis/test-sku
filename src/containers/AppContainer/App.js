@@ -7,6 +7,7 @@ import LoginContainer from '../LoginContainer'
 import DashBoardContainer from '../DashboardContainer'
 import ProductContainer from '../ProductContainer'
 import EditProductContainerNew from '../EditProductContainerNew';
+import OrderContainer from '../OrderContainer';
 
 class App extends Component {
 
@@ -20,7 +21,8 @@ class App extends Component {
           <Route exact path="/login" component={LoginContainer} />
           <Route exact path="/info" component={DashBoardContainer} />
           <Route exact path="/product" component={ProductContainer} />
-          <Route exact path="/" component={EditProductContainerNew} />
+          <Route exact path="/edit" component={EditProductContainerNew} />
+          <Route exact path="/" component={OrderContainer} />
           
         </Switch>
 
