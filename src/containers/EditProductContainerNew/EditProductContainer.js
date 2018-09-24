@@ -70,7 +70,7 @@ class EditProductContainer extends Component {
         <Grid>
           <Row>
             <Col md={2} xsHidden={true} smHidden={true}>
-              <DashboardSidebar activeClass="Products" />
+              <DashboardSidebar activeClass="Products" {...this.props}/>
             </Col>
             <Col md={10} xs={12}>
 
