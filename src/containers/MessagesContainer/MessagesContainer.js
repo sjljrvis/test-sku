@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Glyphicon, Row, Col, Grid, Tabs, Tab } from 'react-bootstrap';
+import openSocket from 'socket.io-client';
 
 import DashboardHeader from '../../components/DashboardHeader'
 import DashboardSidebar from '../../components/DashboardSidebar'
@@ -20,7 +21,11 @@ class MessagesContainer extends Component {
     this.setState({ width: 300, marginleft: 0 })
   }
   _setStyle = () => {
-    this.setState({ width: 75, marginleft: 0 })
+    this.setState({ width: 0, marginleft: 0 })
+  }
+
+  componentDidMount() {
+
   }
 
   render() {
@@ -41,8 +46,8 @@ class MessagesContainer extends Component {
                   <h2 style={{ margin: 5 }}>Messages</h2>
                 </div>
 
-                <div style={{ display: "flex", flexDirection: "row", borderStyle: "solid", borderWidth: 1, border: "none" }}>
-                  <div style={{ height: 400, width: width, marginLeft: marginleft, padding: 10, overflowY: "scroll" }}>
+                <div style={{ display: "flex", flexDirection: "row", borderStyle: "solid", borderWidth: 1, border: "none", marginTop: 10 }}>
+                  <div style={{ height: 540, width: width, marginLeft: marginleft, padding: 10, overflowY: "scroll", display: "block" }}>
 
                     {/* <button onClick={this.setStyle}>show</button>
                     <button onClick={this._setStyle}>close</button> */}
@@ -76,7 +81,7 @@ class MessagesContainer extends Component {
                     </div>
                   </div>
 
-                  <div style={{ height: 400, width: "100%", padding: 10, }}>
+                  <div style={{ height: 540, width: "100%", padding: 0, position: "relative" }}>
 
                     <div style={{}}>
                       <label>
@@ -86,48 +91,21 @@ class MessagesContainer extends Component {
                     </div>
 
 
-                    <div style={{ height: 300, overflowY: "scroll", padding: 10 }}>
+                    <div style={{ height: 400, overflowY: "scroll", padding: 10, display: "flex", flexDirection: "column-reverse" }}>
 
-                      <div style={{ borderRadius: ".25rem", minWidth: "15%", maxWidth: "15%", backgroundColor: "#efefef", marginRight: "auto", padding: 10, color: "#999999", fontWeight: 500 }}>
+                      <div style={{ borderRadius: ".25rem", minWidth: 50, maxWidth: 250, display: "inline-block", padding: "10px 15px", backgroundColor: "#efefef", marginRight: "auto", color: "#999999", fontWeight: 500 }}>
                         Hi sejal
                       </div>
 
-                      <div style={{ borderRadius: ".25rem", minWidth: "15%", maxWidth: "15%", backgroundColor: "#2a7cf7", marginLeft: "auto", padding: 10, color: "#fff", fontWeight: 500 }}>
+                      <div style={{ borderRadius: ".25rem", minWidth: 50, maxWidth: 250, display: "inline-block", padding: "10px 15px", backgroundColor: "#2a7cf7", marginLeft: "auto", color: "#fff", fontWeight: 500 }}>
                         hey mike
                       </div>
 
-
-
-                      <div style={{ borderRadius: ".25rem", minWidth: "15%", maxWidth: "15%", backgroundColor: "#efefef", marginRight: "auto", padding: 10, color: "#999999", fontWeight: 500 }}>
-                        Hi sejal
-                      </div>
-
-                      <div style={{ borderRadius: ".25rem", minWidth: "15%", maxWidth: "15%", backgroundColor: "#2a7cf7", marginLeft: "auto", padding: 10, color: "#fff", fontWeight: 500 }}>
-                        hey mike
-                      </div>
-
-
-                      <div style={{ borderRadius: ".25rem", minWidth: "15%", maxWidth: "15%", backgroundColor: "#efefef", marginRight: "auto", padding: 10, color: "#999999", fontWeight: 500 }}>
-                        Hi sejal
-                      </div>
-
-                      <div style={{ borderRadius: ".25rem", minWidth: "15%", maxWidth: "15%", backgroundColor: "#2a7cf7", marginLeft: "auto", padding: 10, color: "#fff", fontWeight: 500 }}>
-                        hey mike
-                      </div>
-
-
-                      <div style={{ borderRadius: ".25rem", minWidth: "15%", maxWidth: "15%", backgroundColor: "#efefef", marginRight: "auto", padding: 10, color: "#999999", fontWeight: 500 }}>
-                        Hi sejal
-                      </div>
-
-                      <div style={{ borderRadius: ".25rem", minWidth: "15%", maxWidth: "15%", backgroundColor: "#2a7cf7", marginLeft: "auto", padding: 10, color: "#fff", fontWeight: 500 }}>
-                        hey mike
-                      </div>
 
                     </div>
 
-                    <div style={{ height: 75, padding: 10 }}>
-                      <div className="chat-input-box" style={{ height: "100%", width: "100%", padding: 2 }}>
+                    <div style={{ height: 60, padding: 0, bottom: 20, width: "100%", position: "absolute" }}>
+                      <div className="chat-input-box" style={{ height: "100%", width: "100%", padding: 0 }}>
                         <div className="chat-input-box-emoji">
                           <img src="../../../assets/smiling.svg" alt="store" style={{ width: 30, height: 30 }} />
                         </div>
@@ -143,6 +121,7 @@ class MessagesContainer extends Component {
                   </div>
 
                 </div>
+
 
                 {/* <Col md={2} xs={2}>
                   <div style={{ height: 300, backgroundColor: "red" }}>

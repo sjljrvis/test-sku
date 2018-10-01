@@ -19,7 +19,7 @@ class DashboardSidebar extends Component {
   render() {
     let { activeClass } = this.props;
     return (
-      <div className="app-sidebar" style={{ height: 500, width: 200 }}>
+      <div className="app-sidebar" style={{ height: 500, width: 90 }}>
         <div className="app-sidebar-item" onClick={() => this.props.history.push('/product')}>
           <h4 style={{ fontWeight: 300, fontSize: 16, color: activeClass === "Products" ? "#2a7cf7" : null }}>
             <ion-icon name="ios-archive" style={{ marginRight: 5 }}></ion-icon>Products</h4>
