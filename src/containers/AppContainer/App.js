@@ -25,7 +25,8 @@ class App extends Component {
           <Route exact path="/edit" component={EditProductContainerNew} />
           <Route exact path="/orders" component={OrderContainer} />
           <Route exact path="/" component={MessagesContainer} />
-          
+     
+
         </Switch>
 
       </div>

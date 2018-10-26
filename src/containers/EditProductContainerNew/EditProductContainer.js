@@ -35,7 +35,7 @@ class EditProductContainer extends Component {
   makeForm = (file) => {
     console.log(file)
     let data = new FormData();
-    data.append('userId', "1231212")
+    data.append('userId', "userId")
     data.append("file", file);
     return data;
   }
@@ -70,7 +70,7 @@ class EditProductContainer extends Component {
         <Grid>
           <Row>
             <Col md={2} xsHidden={true} smHidden={true}>
-              <DashboardSidebar activeClass="Products" {...this.props}/>
+              <DashboardSidebar activeClass="Products" {...this.props} />
             </Col>
             <Col md={10} xs={12}>
 
